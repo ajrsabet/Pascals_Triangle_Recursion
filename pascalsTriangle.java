@@ -1,7 +1,7 @@
 
 /*
  * CS240 Lab 1: Recursion
- * Team: John Humphry, Noumi, Adam Sabet
+ * Team: John Humphry, Jing Lin Lai, Adam Sabet
  */
 import java.util.Scanner;
 import java.util.Arrays;
