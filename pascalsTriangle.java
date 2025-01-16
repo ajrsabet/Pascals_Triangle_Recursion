@@ -13,9 +13,9 @@ public class pascalsTriangle {
         // Ask user how many levels
         System.out.print("Enter how many levels Pascal's Triangle should be: ");
 
-        // int levelsDeep = inputTestInt(scanner); // with testing input
+        int levels = inputTestInt(scanner); // with testing input
 
-        int triangle[][] = new int[scanner.nextInt()][];
+        int triangle[][] = new int[levels][];
         int i = 0;
         int j = 0;
 
@@ -40,39 +40,13 @@ public class pascalsTriangle {
         scanner.close();
     }
 
-    // // Recursive Function
-    // public static void recursion(int[][] triangle, int i, int j) {
-    // if (i == triangle.length) { // Base case: stop recursion
-    // return;
-    // }
-
-    // // System.out.println("i: " + i + " j: " + j);
-    // if (j == i) { // Last column
-    // if (i == 0) { // Correct for first row
-    // triangle[i] = new int[i + 1]; // Create a new row
-    // }
-    // triangle[i][j] = 1;
-    // printRow(triangle[i]);
-    // recursion(triangle, i + 1, 0); // Move to the next row
-    // } else if (j == 0) { // First column
-    // triangle[i] = new int[i + 1]; // Create a new row
-    // triangle[i][j] = 1;
-    // // printRow(triangle[i]);
-    // recursion(triangle, i, j + 1);
-    // } else { // Middle columns
-    // if (i > 0 && j > 0) { // Ensure valid indices
-    // triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
-    // recursion(triangle, i, j + 1);
-    // }
-    // }
-    // }
-
-    // Recursive Function
+    // Recursive Function REV 1
     public static void recursion(int[][] triangle, int i, int j) {
         if (i == triangle.length) { // Base case: stop recursion
             return;
         }
 
+        // System.out.println("i: " + i + " j: " + j);
         if (j == i) { // Last column
             if (i == 0) { // Correct for first row
                 triangle[i] = new int[i + 1]; // Create a new row
